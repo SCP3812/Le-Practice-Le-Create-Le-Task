@@ -7,14 +7,15 @@ def Markovian(markov):
     markov_list = markov.split(" ")
 
     for items in markov_list:
-        if not markov_chain[items]:
-            markov_chain[items] = []
+        markov_chain[items] = []
         markov_chain[items].append(items)
-    words = markov_chain.keys()
+    words = list(markov_chain.keys())
+    print(markov_chain.keys())
     word = words[random.randint(0, len(words))]
+    print(word) 
     result = ""
 
-    for i in len(words):
+    for i in words:
         result = word + " "
         newWord = markov_chain[word][random.randint(0, len(words))]
         word = newWord
