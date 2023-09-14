@@ -13,10 +13,10 @@ def Markovian(markov):
         word = markov_list[n].lower().replace('\W+', "")
         print(word)
         print(n)
-        if not markov_chain[n]:
-            markov_chain[n] = []
+        if not word in markov_chain.keys():
+            markov_chain[word] = []
         if markov_list[n+1]:
-            markov_chain[n].append(markov_list[n])
+            markov_chain[word].append(markov_list[n+1])
         n = n + 1 
     words = list(markov_chain.keys())
     print(markov_chain.keys())
