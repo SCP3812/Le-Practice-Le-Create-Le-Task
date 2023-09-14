@@ -11,26 +11,22 @@ def Markovian(markov):
     n=0
     while n < len(markov_list)-1:
         word = markov_list[n].lower().replace('\W+', "")
-        print(word)
-        print(n)
         if not word in markov_chain.keys():
             markov_chain[word] = []
         if markov_list[n+1]:
             markov_chain[word].append(markov_list[n+1])
         n = n + 1 
     words = list(markov_chain.keys())
-    print(markov_chain.keys())
     word = words[random.randint(0, len(words)-1)]
-    print(word) 
     result = ""
 
     for i in words:
-        result = word + " "
+        result = result + word + " "
         newWord = markov_chain[word][random.randint(0, len(markov_chain[word])-1)]
         word = newWord
 
         if not word or not word in markov_chain:
-            word = words[random.randint(0, len(words))]
+            word = words[random.randint(0, len(words)-1)]
     return result
 
 
