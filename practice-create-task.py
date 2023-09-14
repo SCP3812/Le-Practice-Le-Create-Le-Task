@@ -20,13 +20,13 @@ def Markovian(markov):
         n = n + 1 
     words = list(markov_chain.keys())
     print(markov_chain.keys())
-    word = words[random.randint(0, len(words))]
+    word = words[random.randint(0, len(words)-1)]
     print(word) 
     result = ""
 
     for i in words:
         result = word + " "
-        newWord = markov_chain[word][random.randint(0, len(words))]
+        newWord = markov_chain[word][random.randint(0, len(markov_chain[word])-1)]
         word = newWord
 
         if not word or not word in markov_chain:
