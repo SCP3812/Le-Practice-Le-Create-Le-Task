@@ -7,7 +7,8 @@ def Markovian(markov):
     markov_list = markov.split(" ")
 
     for items in markov_list:
-        markov_chain[items] = []
+        if not markov_chain[items]:
+            markov_chain[items] = []
         markov_chain[items].append(items)
     words = markov_chain.keys()
     word = words[random.randint(0, len(words))]
