@@ -2,7 +2,7 @@ import random
      
 #markov = input("Give your prompt here: ")
 
-markov = "Giles Fletcher in his Of the Russe Common Wealth writes that some maps and descriptions of countries one by Herberstein mention a Slata Baba or the golden hagge an idol in the shape of an old woman who serves as an oracle for indigenous priests However Fletcher sees this as a myth He further writes that in Obdoria near the mouth of Ob River there is a rock of shape resembling a ragged woman bearing a child in her hands and Obdorian Samoyeds use it in their pagan sorcery"
+markov = "But beyond Wisu by the Sea of Darkness there lies a land known by the name of Yura. In summers the days are very long there, so that the Sun does not set for forty days, as the merchants say; but in winters the nights are equally long. The merchants report that Darkness is not far (from them), and that the people of Yura go there and enter it with torches, and find a huge tree there which is like a big village. But on top of the tree there sits a large creature, they say it is a bird. And they bring merchandise along, and each merchant sets down his goods apart from those of the others; and he makes a mark on them and leaves, but when he comes back, he finds commodities there, necessary for his own country"
 
 def Markovian(markov): 
     markov_chain = {}
