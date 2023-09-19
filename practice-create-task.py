@@ -1,5 +1,6 @@
 import random 
-     
+#The program's purpose is to intake a piece of text, analyze the writing pattern of the text, and then output another piece of text with a similar, but randomly different, writing pattern.
+  
 markov = input("Give your prompt here: ")
 
 def Markovian(markov): 
